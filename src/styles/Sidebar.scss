@@ -1,5 +1,6 @@
 .Sidebar {
     .UserMeta {
+        margin-bottom: 10px;
 
         a {
             text-decoration: none;
@@ -24,16 +25,30 @@
     }
     &-Links {
         display: block;
-        margin: 0;
+        margin: 0 0 5px;
         padding: 0;
         list-style: none;
         li {
             margin: 0;
             padding: 0;
             list-style: none;
+
             a {
+                display: block;
+                border: 1px solid #eaeaea;
+                border-radius: 5px;
+                &.active, &:hover {border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color:rgba(#ffff, 0.75);}
                 position: relative;
+                padding: 3px;
+                padding-left: 28px;
+                text-decoration: none;
+                color: #333;
+                
                 span {
+                    left: 3px;
+                    font-size: 0.9em;
                     position: absolute;
                     display: inline-block;
                     transform: scale(4%);
