@@ -1,11 +1,11 @@
 import React, { Component } from "react";
+import Header from "./Bootstrap/Header";
 
 class App extends Component {
   render() {
     return (
-      <div classname="App"div>
-        <h1>Huuu! </h1>
-        <p>...A messaging application!</p>
+      <div className="App">
+        <Header className="Header">Facebook Clone</Header>
       </div>
     )
   }

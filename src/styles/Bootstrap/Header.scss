@@ -1,0 +1,16 @@
+.Header {
+    margin-bottom: 10px;
+    &.bg-light{
+        background-color: #4762b2 !important;
+    }
+    &.navbar-light {
+        .navbar-brand {
+            color : #ffff; 
+            img {
+                height: 1.5em;
+                position: relative;
+                top: -2px;
+            }
+        }
+    }
+}
