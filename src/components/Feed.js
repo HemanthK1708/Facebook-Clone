@@ -1,9 +1,12 @@
+import Card from "./Bootstrap/Card";
 import FBBox from "./FBBox";
+
 
 const Feed = () => {
     return <div className="col-3 Feed">
         <FBBox>
             <div className="BirthdayContainer">
+                <h4>Birthdays !!!</h4>
                 <img src="https://cdn-icons-png.flaticon.com/512/1139/1139982.png" alt="Gift" />
                     <a href="/">Hemanth</a>, <a href="/">Mark Zuck</a>, <a href="/">Sundar Pichai </a>{" "}
                     and 3 others.
@@ -49,6 +52,29 @@ const Feed = () => {
         </div>
         </FBBox>
         <FBBox><div className="FeedsContainer">
+            <h4>News Feed</h4>
+            <ul>
+                {[
+                    {
+                    Image: "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2021/05/0/0/Bitcoin-Volatility.jpg?ve=1&tl=1"
+                    },
+                    {
+                        Image: "https://d3rk2wqy1pqubb.cloudfront.net/wp-content/uploads/2021/01/Traffic-Jam.jpg"
+                    },
+                    {
+                        Image: "https://i.ytimg.com/vi/m9rrE3QGFPc/maxresdefault.jpg"
+                    }
+                    ].map((card, key) =>(
+                <li key={key}>
+                    <Card Image={card.Image} ImgAlign="top">
+                        <a href="/">Bitcoin, Traffic Increase, Food Technology Blogs and more...</a>
+                        <p className="m-0 text-muted">
+                             Posted <abbr title="12th Sunday September 2021"> today.</abbr>
+                             </p>
+                    </Card>
+                </li>
+                ))}
+            </ul>
 
         </div>
         </FBBox>
