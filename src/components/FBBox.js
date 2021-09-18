@@ -1,7 +1,10 @@
 import React from 'react'
 
-const FBBox = ({children, className}) => {
-    return  <div className={"FBBox" + (className ? " " + className : "")}> {children}</div>;
+const FBBox = ({Heading, children, className}) => {
+    return  <div className={"FBBox" + (className ? " " + className : "")}>
+        {Heading && <h3>{Heading}</h3>}
+        {children}
+        </div>;
     
 }
 
