@@ -47,10 +47,10 @@ const Sidebar = () => {
     </div>
     {Object.keys(ContentList).map(section => <Fragment key={section}>
         {section !== "Default" && <h3>{section}</h3>}
-        <ul className="Sidebar=Links">
+        <ul className="Sidebar-Links">
             {ContentList[section].map(link => (
                 <li key={link.Icon}>
-                    <a href={link.Link}>
+                    <a href={link.Link} className={link.Icon === "news" ? "active" : null}>
                     <span className={"Sprites-" + link.Icon}/>
                     {link.Text}
                     </a>
