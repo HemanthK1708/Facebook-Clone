@@ -11,8 +11,47 @@ const Feed = () => {
             </div>
 
         </FBBox>
-        <FBBox>Pages</FBBox>
-        <FBBox>Feed</FBBox>
+        <FBBox>
+        <div className="PagesContainer">
+            <h4>Your Pages (2)</h4>
+            <ul>
+                <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/634/634137.png" alt="Pages" />
+                <div className="PageMeta">
+                    <a href="/"><strong>Facebook</strong></a>
+                    <a href="/">
+                    <img src="https://img-premium.flaticon.com/png/512/1306/premium/1306155.png?token=exp=1631972510~hmac=735264f21230110fcad71ce62779687d" alt="Messages" />
+                     Messages 20+ </a> 
+                    <a href="/">
+                        <img src="https://img-premium.flaticon.com/png/512/1289/premium/1289475.png?token=exp=1631972734~hmac=ea71c52f9703726c4d107107d2d1cac3" alt="Notifications"/>
+                    Notifications (20+)
+                    </a>
+                
+                </div>
+                </li>
+                <li>
+                <img src="https://s3-us-west-2.amazonaws.com/nv-uploaded-avatars/prod/6b829300-109a-4be3-abf1-f06016e89a83.png" alt="Hemanth Kumar" />
+                <div className="PageMeta">
+                    <a href="/"><strong>Hemanth Kumar</strong></a>
+                    <a href="/">
+                    <img src="https://img-premium.flaticon.com/png/512/1306/premium/1306155.png?token=exp=1631972510~hmac=735264f21230110fcad71ce62779687d" alt="Messages" />
+                     Messages 20+ </a> 
+                    <a href="/">
+                        <img src="https://img-premium.flaticon.com/png/512/1289/premium/1289475.png?token=exp=1631972734~hmac=ea71c52f9703726c4d107107d2d1cac3" alt="Notifications"/>
+                    Notifications (20+)
+                    </a>
+                
+                </div>
+                </li>
+                
+            </ul>
+
+        </div>
+        </FBBox>
+        <FBBox><div className="FeedsContainer">
+
+        </div>
+        </FBBox>
         </div>;
     
 }
