@@ -69,7 +69,7 @@ const Feed = () => {
                     <Card Image={card.Image} ImgAlign="top">
                         <a href="/">Bitcoin, Traffic Increase, Food Technology Blogs and more...</a>
                         <p className="m-0 text-muted">
-                             Posted <abbr title="12th Sunday September 2021"> today.</abbr>
+                             Posted <abbr title="18th Sunday September 2021"> today</abbr>
                              </p>
                     </Card>
                 </li>
