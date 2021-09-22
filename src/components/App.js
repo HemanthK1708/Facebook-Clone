@@ -7,10 +7,13 @@ import Main from "./Main";
 class App extends Component {
   state = {
     UserData : {
+      UserMeta : {
+        
         FullName : "Hemanth Kumar Chilamkurthi",
-        Avatar : " ",
+        Avatar : "https://s3-us-west-2.amazonaws.com/nv-uploaded-avatars/prod/6b829300-109a-4be3-abf1-f06016e89a83.png",
         ProfileURL : " ",
-        Birthdays: [
+      },
+      Birthdays: [
           {
           FullName: "Hemanth Kumar Chilamkurthi",
           ProfileURL: "/"
@@ -58,7 +61,45 @@ class App extends Component {
             DateTime: "12th Sunday September 2021",
             DatePosted: "2 days ago"
           }
-        ]
+        ],
+        ContentList:
+        {
+          Default : [{
+              Link: "/",
+              Icon: "news",
+              Text: "News Feed", 
+          },
+          {
+              Link: "/",
+              Icon: "chat",
+              Text: "Messenger", 
+          },
+          {
+              Link: "/",
+              Icon: "watch",
+              Text: "Watch", 
+          },
+          {
+              Link: "/",
+              Icon: "marketplace",
+              Text: "Marketplace", 
+          },
+      ],
+          Shortcuts: [
+              {
+                  Link: "/",
+                  Icon: "web",
+                  Text: "WEB", 
+              }
+          ],
+          Explore: [
+              {
+                  Link: "/",
+                  Icon: "youtube",
+                  Text: "YouTube Channel", 
+              }
+          ],
+        }
       },
     FeedData : [],
   };
@@ -69,7 +110,7 @@ class App extends Component {
         <div className="container">
         
         <div className="row">
-        <Sidebar />
+        <Sidebar ContentList={this.state.UserData.ContentList} UserMeta={this.state.UserData.UserMeta}/>
         <Main />
         <Feed Birthdays={this.state.UserData.Birthdays}
         Pages = {this.state.UserData.Pages}
