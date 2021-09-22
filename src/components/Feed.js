@@ -2,13 +2,18 @@ import Card from "./Bootstrap/Card";
 import FBBox from "./FBBox";
 
 
-const Feed = () => {
+const Feed = ({Birthdays}) => {
     return <div className="col-3 Feed">
         <FBBox>
             <div className="BirthdayContainer">
                 <h4>Birthdays !!!</h4>
                 <img src="https://cdn-icons-png.flaticon.com/512/1139/1139982.png" alt="Gift" />
-                    <a href="/">Hemanth</a>, <a href="/">Mark Zuck</a>, <a href="/">Sundar Pichai </a>{" "}
+                   {Birthdays.map(user =>( 
+                    <>
+                       <a href={user.ProfileURL}>{user.FullName}</a>
+                    {" ,"}
+                    </>
+                   ))}
                     and 3 others.
                 
             </div>
