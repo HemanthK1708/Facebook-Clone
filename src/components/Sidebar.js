@@ -1,50 +1,10 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import SidebarUserMeta from './SidebarUserMeta';
 
-const Sidebar = () => {
-    const ContentList = {
-        Default : [{
-            Link: "/",
-            Icon: "news",
-            Text: "News Feed", 
-        },
-        {
-            Link: "/",
-            Icon: "chat",
-            Text: "Messenger", 
-        },
-        {
-            Link: "/",
-            Icon: "watch",
-            Text: "Watch", 
-        },
-        {
-            Link: "/",
-            Icon: "marketplace",
-            Text: "Marketplace", 
-        },
-    ],
-        Shortcuts: [
-            {
-                Link: "/",
-                Icon: "web",
-                Text: "WEB", 
-            }
-        ],
-        Explore: [
-            {
-                Link: "/",
-                Icon: "youtube",
-                Text: "YouTube Channel", 
-            }
-        ],
-    };
+const Sidebar = ({ContentList, UserMeta }) => {
+    
     return <div className="Sidebar col-2">  
-    <div className="UserMeta">
-    <a href="/">
-      <img src="https://s3-us-west-2.amazonaws.com/nv-uploaded-avatars/prod/6b829300-109a-4be3-abf1-f06016e89a83.png" alt="H"/>
-      Hemanth
-      </a>
-    </div>
+    <SidebarUserMeta {...UserMeta} />
     {Object.keys(ContentList).map(section => <Fragment key={section}>
         {section !== "Default" && <h3>{section}</h3>}
         <ul className="Sidebar-Links">
