@@ -1,6 +1,7 @@
 import React from 'react'
+import HeaderUserMeta from '../HeaderUserMeta';
 
-const Header = ({ dark, children, className }) => {
+const Header = ({ dark, children, className, UserMeta }) => {
   dark = !!dark ? "dark" : "light";
     return (
         <nav
@@ -14,16 +15,7 @@ const Header = ({ dark, children, className }) => {
        className="me-2"/>
       {children}
     </a>
-    <div className="UserMeta">
-    <a href="/">
-      <img src="https://s3-us-west-2.amazonaws.com/nv-uploaded-avatars/prod/6b829300-109a-4be3-abf1-f06016e89a83.png" alt="H"/>
-      Hemanth
-      </a>
-      <span className="nav-links">
-      <a href="/">Home</a>
-      <a href="/">Create</a>
-      </span>
-    </div>
+    <HeaderUserMeta {...UserMeta} />
   </div>
 </nav>
     );

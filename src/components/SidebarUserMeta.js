@@ -1,10 +1,10 @@
 import React from 'react'
 
-const SidebarUserMeta = ({ProfileURL, Avatar, FullName }) => {
+const SidebarUserMeta = ({FullName, ProfileURL, Avatar}) => {
     return (
         <div className="UserMeta">
         <a href={ProfileURL}>
-          <img src={Avatar} alt={fullName}/>,
+          <img src={Avatar} alt={FullName}/>
           {FullName }
           </a>
         </div>

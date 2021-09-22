@@ -11,7 +11,7 @@ class App extends Component {
         
         FullName : "Hemanth Kumar Chilamkurthi",
         Avatar : "https://s3-us-west-2.amazonaws.com/nv-uploaded-avatars/prod/6b829300-109a-4be3-abf1-f06016e89a83.png",
-        ProfileURL : " ",
+        ProfileURL : "/"
       },
       Birthdays: [
           {
@@ -106,11 +106,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header className="Header">Facebook Clone</Header>
+        <Header className="Header" UserMeta={this.state.UserData.UserMeta}>Facebook Clone</Header>
         <div className="container">
         
         <div className="row">
-        <Sidebar ContentList={this.state.UserData.ContentList} UserMeta={this.state.UserData.UserMeta}/>
+        <Sidebar ContentList={this.state.UserData.ContentList} 
+        UserMeta={this.state.UserData.UserMeta}
+        />
         <Main />
         <Feed Birthdays={this.state.UserData.Birthdays}
         Pages = {this.state.UserData.Pages}
