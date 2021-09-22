@@ -54,7 +54,7 @@
           "DatePosted": "2 days ago"
         }
       ],
-     " ContentList":
+     "ContentList":
       {
          "" : [{
             "Link": "/",
@@ -77,7 +77,7 @@
             "Text": "Marketplace"
         }
     ],
-       " Shortcuts": [
+       "Shortcuts": [
             {
                 "Link": "/",
                 "Icon": "web",
@@ -93,3 +93,4 @@
         ]
       }
     }
+  

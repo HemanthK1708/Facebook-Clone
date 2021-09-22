@@ -11,8 +11,8 @@ class App extends Component {
     WallData: []
   };
   componentDidMount() {
-    GetUserData().then(({ data: UserData }) => this.setState({ UserData }));
-    GetWallData().then(({ data: WallData }) => this.setState({ WallData }));
+    GetUserData().then(({data: UserData})=> this.setState({UserData}));
+    GetWallData().then(({data: WallData})=> this.setState({WallData}));
   }
   render() {
     return (
@@ -30,7 +30,7 @@ class App extends Component {
                 ContentList={this.state.UserData.ContentList}
                 UserMeta={this.state.UserData.UserMeta}
               />
-              <Main WallData={this.state.WallData} />
+              <Main />
               <Feed
                 Birthdays={this.state.UserData.Birthdays}
                 Pages={this.state.UserData.Pages}

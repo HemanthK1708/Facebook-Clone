@@ -1,9 +1,15 @@
-import React from 'react'
-import FBBox from './FBBox';
+import React from "react"
+import FBBox from "./FBBox";
 
-const Main = () => {
-    return <div className="col-7">
-        <FBBox Heading="Create a Post"></FBBox>
-    </div>;
+const Main = ({ WallData }) => {
+  return (
+    <div className="col-7 Main">
+      <FBBox Heading="Create a Post"></FBBox>
+      <pre className="bg-light border rounded p-2">
+          {JSON.stringify(WallData, null, 2)}
+      </pre>
+    </div>
+  );
 };
+
 export default Main;

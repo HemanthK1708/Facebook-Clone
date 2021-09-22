@@ -3,7 +3,7 @@ import SidebarUserMeta from './SidebarUserMeta';
 
 const Sidebar = ({ContentList, UserMeta }) => {
     
-    return <div className="Sidebar col-2">  
+    return( <div className="Sidebar col-2">  
     <SidebarUserMeta {...UserMeta} />
     {Object.keys(ContentList).map(section => <Fragment key={section}>
         {section !== "Default" && <h3>{section}</h3>}
@@ -20,6 +20,7 @@ const Sidebar = ({ContentList, UserMeta }) => {
         </Fragment>
         )}
     </div>
-}
+    );
+};
 
 export default Sidebar
