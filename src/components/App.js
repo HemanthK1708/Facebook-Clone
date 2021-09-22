@@ -106,8 +106,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header className="Header" UserMeta={this.state.UserData.UserMeta}>Facebook Clone</Header>
-        <div className="container">
+        <Header className="Header" 
+        UserMeta={this.state.UserData.UserMeta && this.state.UserData.UserMeta}>
+          Facebook Clone
+          </Header>
+          {this.state.UserData ? (<div className="container">
         
         <div className="row">
         <Sidebar ContentList={this.state.UserData.ContentList} 
@@ -118,9 +121,10 @@ class App extends Component {
         Pages = {this.state.UserData.Pages}
         NewsFeeds= {this.state.UserData.NewsFeeds}/>
         </div>
-        </div>
+        </div>) : ("Login Screen")}
+        
       </div>
-    )
+    );
   }
 }
 
