@@ -15,7 +15,7 @@ const Header = ({ dark, children, className, UserMeta }) => {
        className="me-2"/>
       {children}
     </a>
-    <HeaderUserMeta {...UserMeta} />
+    {UserMeta && <HeaderUserMeta {...UserMeta} />}
   </div>
 </nav>
     );
