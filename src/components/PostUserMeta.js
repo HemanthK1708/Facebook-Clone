@@ -7,7 +7,9 @@ const PostUserMeta = ({FullName ,Avatar, ProfileURL, Location, DateTime}) => {
             <strong>{FullName}</strong></a>
             </p>
             <p className="m-0 text-muted">
-                <TimeAgo date={DateTime}/> &bull; {Location}
+                <TimeAgo date={DateTime}/>
+                <br />
+                 {Location}
             </p>
        </div>
     </div>
