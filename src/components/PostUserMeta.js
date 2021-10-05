@@ -11,7 +11,7 @@ const PostUserMeta = ({FullName ,Avatar, ProfileURL, Location, DateTime}) => {
             </p>
        </div>
     </div>
-    )
-}
+    );
+};
 
-export default PostUserMeta
+export default PostUserMeta;
